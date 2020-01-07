@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8"/>
+    <title>text</title>
+    <script type = "text/javascript" src = "./umltext.js">
+    </script>
+  </head>
+  <body>
+    <h1 align = "center">统一建模语言理论测试</h1>
+    <hr/>
+    <div>
+      <!--<from >-->
+        <div style = "text-align:center">
+            <table width = "100%">
+              <tr>
+                <td align = "right">考试科目：</td>
+                <td align = "left">统一建模语言UML</td>
+                <td align = "right">时间：</td>
+                <td align = "left">100分钟</td>
+                <td align = "right">得分：</td>
+                <td align = "left" ><b id = "score" ></b></td>
+              </tr>
+              <tr>
+                <td align = "right">班级：</td>
+                <td align = "left"><input type = "text" name = "class"></td>
+                <td align = "right">学号：</td>
+                <td align = "left"><input type = "text" name = "ID"></td>
+                <td align = "right">姓名：</td>
+                <td align = "left"><input type = "text" name = "usename"></td>
+              </tr>
+            </table>
+        </div><br/>
+
+        <div>
+          <h4>一 、填空题</h4>
+          1.UML的中文全称是：<input type = "text" id = "UMLname"></br>
+          2.对象最突出的特征是：<input type = "text" id = "special1" name = "special">
+                            <input type = "text" id = "special2" name = "special">
+                            <input type = "text" id = "special3" name = "special"><br/>
+
+          <h4>二 、选择题</h4>
+          1.UML 与软件工程的关系是:<br/>
+          <input type = "radio" name = "UMLandSOFT" value = "a">UML 就是软件工程<br/>
+          <input type = "radio" name = "UMLandSOFT" value = "b">UML 参与到软件工程中软件开发过程的几个阶段<br/>
+          <input type = "radio" name = "UMLandSOFT" value = "c">UML 与软件工程无关<br/>
+          <input type = "radio" name = "UMLandSOFT" value = "d">UML 是软件工程的一部分<br/>
+          2.Java 语言支持:<br/>
+          <input type = "radio" name = "JAVALANG" value = "a">单继承<br/>
+          <input type = "radio" name = "JAVALANG" value = "b">多继承<br/>
+          <input type = "radio" name = "JAVALANG" value = "c">单继承和多继承都支持<br/>
+          <input type = "radio" name = "JAVALANG" value = "d">单继承和多继承都不支持<br/>
+
+          <h4>三 、 多选题</h4>
+          1.用例的粒度分为以下哪三种。<br/>
+          <input type="checkbox" name="duo" value = "a"/>概述级<br/>
+          <input type="checkbox" name="duo" value = "b"/>需求级<br/>
+          <input type="checkbox" name="duo" value = "c"/>用户目标级<br/>
+          <input type="checkbox" name="duo" value = "d"/>子功能级<br/>
+
+          2.类图由以下哪三部分组成。<br/>
+          <input type="checkbox" name="lei" value = "a"/>名称(Name)<br/>
+          <input type="checkbox" name="lei" value = "b"/>属性(Attribute)<br/>
+          <input type="checkbox" name="lei" value = "c"/>操作(Operation)<br/>
+          <input type="checkbox" name="lei" value = "d"/>方法(Function)<br/>
+
+          <h4>四 、 判断题</h4>
+          1.用例图只是用于和客户交流和沟通的,用于确定需求。<br/>
+          <input type = "radio" name = "yongli" value = "true">对<br/>
+          <input type = "radio" name = "yongli" value = "faluse">错<br/>
+          2.在状态图中,终止状态在一个状态图中允许有任意多个。<br/>
+          <input type = "radio" name = "zhuangtai" value = "true">对<br/>
+          <input type = "radio" name = "zhuangtai" value = "faluse">错<br/>
+
+          <h4>五 、简 答 题</h4>
+          1.简述什么是模型以及模型的表现形式?<br/>
+          <textarea id = "textvalue"></textarea><br/>
+          <input type = "submit" value = "提交" name = "submit" onclick = "getScore()">
+        <!--</from>-->
+      </div>
+   </div>
+  </body>
+</html>
