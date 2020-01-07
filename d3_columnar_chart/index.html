@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>d3_columnar_chart</title>
+    <style type="text/css">
+      body {
+        padding: 100px;
+      }
+
+      .bar {
+        display: inline-block;
+        width: 20px;
+        height: 50px;
+        margin-left: 2px;
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./../lib/d3/d3.min.js"></script>
+    <script type="text/javascript">
+      var dataset = [5, 10, 15, 20, 25];
+      d3.select('body').selectAll('div')
+        .data(dataset)
+        .enter()
+        .append('div')
+        .attr('class', 'bar')
+        .style('height', function (d) {
+          return d * 5 + 'px';
+        });
+    </script>
+  </body>
+</html>
