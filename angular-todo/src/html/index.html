@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="todoStore">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/index.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="./js/index.js"></script>
+    <title>Angular_todo</title>
+  </head>
+  <body>
+    <div class="todo" ng-controller="TodoController as todo">
+      <h1>ToDo List</h1>
+      <form ng-controller="AddController as add" ng-submit="add.addItem(todo.items)">
+        <input ng-model="add.item.name" type="text">
+        <button>提交</button>
+      </form>
+
+      <h2>List</h2>
+      <div ng-repeat="item in todo.items">
+          <div id={{item.id}} class="item" ng-click="todo.removeItem(item.id)">
+          <label>{{item.name}}</label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
