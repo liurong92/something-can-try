@@ -1,0 +1,70 @@
+<div>
+  <div>
+    <div>欢迎登陆</div>
+    <hr>
+    <form method="post" action="/update">
+
+        <div>
+          <label>用户ID：</label><%= @user[:id] %>
+          <input type="hidden" name="id" value="<%= @user[:id] %>">
+        </div>
+        <div>
+          <label>用户名：</label><%= @user[:userName] %>
+        </div>
+        <div>
+          <label>密码：</label>
+          <input type="text" name="password" value="<%= @user[:password] %>">
+        </div>
+        <div>
+          <label>姓名：</label>
+          <input type="text" name="name" placeholder="请输入修改的姓名" value="<%= @user[:name] %>">
+        </div>
+        <div>
+          <label>邮箱：</label>
+          <input type="email" name="email" value="<%= @user[:email] %>">
+        </div>
+        <div>
+          <label>家庭住址：</label>
+          <input type="text" name="address" placeholder="请输入修改的地址" value="<%= @user[:address] %>">
+        </div>
+        <div>
+          <input type="submit" value="修改">
+        </div>
+    </form>
+
+    <div>
+      <form action="/logout" method="get">
+        <input type="submit" value="退出">
+      </form>
+    </div>
+
+    <div>
+      <form action="/order" method="get">
+        <input type="hidden" name="userId" value="<%= @user[:id] %>">
+        <input type="submit" value="订单">
+      </form>
+    </div>
+
+    <hr>
+    <div>
+      添加商品
+    </div>
+    <div>
+      <% @products.each do |product| %>
+          <div>
+            <form action="addToOrder" method="post">
+              <input type="hidden" name="id" value="<%= @user[:id] %>">
+              <label>商品名称：<%= product.name %></label>
+              <input type="hidden" name="productName" value="<%= product.name %>">
+
+              <label>商品价格：<%= product.price %></label>
+              <input type="hidden" name="productPrice" value="<%= product.price %>">
+
+              <input type="submit" value="添加订单">
+              <hr>
+            </form>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

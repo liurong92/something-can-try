@@ -1,0 +1,10 @@
+<div>
+  <% @orders.each do |order| %>
+      <div>
+        <label>ID：</label><%= order.id %>
+        <label>订单商品：</label><%= order.orderName%>
+        <label>商品价格：</label><%= order.orderPrice%>
+        <hr>
+      </div>
+  <% end %>
+</div>

@@ -1,0 +1,44 @@
+<div class="body-self">
+  <div class="product">
+    <div class="product-head">
+      订单信息
+    </div>
+    <div>
+        <table>
+          <tr>
+            <th>订单ID</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>操作</th>
+          </tr>
+          <% @orders.each { |order| %>
+              <form action="/deleteOrder" method="get">
+                <tr>
+                  <td>
+                    <%= order.id%>
+                    <input type="hidden" name="orderId" value="<%= order.id%>">
+                    <input type="hidden" name="userId" value="<%= @userId%>">
+                  </td>
+                  <td>
+                    <%= order.orderName%>
+                  </td>
+                  <td>
+                    <%= order.orderPrice%>
+                  </td>
+                  <td>
+                    <input type="submit" value="删除" class="button product-button">
+                  </td>
+                </tr>
+              </form>
+          <% } %>
+        </table>
+    </div>
+
+    <div>
+      <form action="/returnUserProfile" method="get">
+        <input type="submit" value="返回" class="button product-button order-return">
+        <input type="hidden" name="userId" value="<%= @userId%>">
+      </form>
+    </div>
+  </div>
+</div>

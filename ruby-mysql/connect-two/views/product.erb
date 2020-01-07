@@ -1,0 +1,15 @@
+<div>
+  <% @products.each do |product| %>
+    <div>
+      <form action="addToOrder" method="post">
+        <label>商品名称：</label>
+        <input type="text" name="productName" value="<%= product.name %>">
+
+        <label>商品价格：</label>
+        <input type="text" name="productPrice" value="<%= product.price %>">
+        <input type="submit" value="添加订单">
+        <hr>
+      </form>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,63 @@
+.useProfile {
+    border: 2px solid #dedede;
+    padding: 20px 100px 20px;
+    float: none;
+    margin-top: 50px;
+    width: 400px;
+    margin-left: 30%;
+    border-radius: 30px;
+}
+
+.label-text {
+    font-size: 18px;
+    font-family: monospace;
+    margin-left: 20px;
+}
+
+.product {
+    padding: 20px 100px 20px;
+    float: none;
+    margin-top: 50px;
+}
+
+.product-head {
+    font-size: 24px;
+    border-bottom: solid;
+}
+
+.product-button {
+    width: 70px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.product-font {
+    font-size: 18px;
+    margin: 15px;
+}
+
+.submit {
+    text-align: center;
+}
+
+.format {
+    margin: 15px 10px 15px;
+}
+
+hr {
+    margin: 1px;
+    border-color: snow;
+}
+
+.product-show {
+    margin: 15px;
+}
+
+.userProfile-text {
+    margin-left: 90px;
+}
+
+.show-product-button {
+    text-align: center
+}

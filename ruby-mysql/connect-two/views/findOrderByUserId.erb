@@ -1,0 +1,25 @@
+<div>
+  <table border="1">
+    <tr>
+      <td>用户ID</td>
+      <td>用户姓名</td>
+      <td>订单ID</td>
+      <td>商品名称</td>
+      <td>商品价格</td>
+    </tr>
+
+  <% @findOrderByUserId.each do |userOrder| %>
+    <tr>
+      <td><%= userOrder.user_tb_id %></td>
+      <td><%= userOrder.userName %></td>
+      <td><%= userOrder.id %></td>
+      <td><%= userOrder.orderName %></td>
+      <td><%= userOrder.orderPrice %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <form action="/inputUserId" method="get">
+    <input type="submit" value="返回">
+  </form>
+</div>

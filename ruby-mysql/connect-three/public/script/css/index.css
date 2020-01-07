@@ -1,0 +1,54 @@
+.login {
+    border: 2px solid #dedede;
+    padding: 20px 60px 30px;
+    float: right;
+    margin-right: 40%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    cursor: auto;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: 宋体;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.register {
+    float: right;
+}
+
+.button {
+    width: 250px;
+    height: 37px;
+    border: 0;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #FFF;
+    background: #3366cc;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.head {
+    text-align: center;
+    font-size: 24px;
+    border-bottom: solid;
+    margin-bottom: 15px;
+}
+
+.login-text {
+    width: 60%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: whitesmoke;
+    background-color: whitesmoke;
+}

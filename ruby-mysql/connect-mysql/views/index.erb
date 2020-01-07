@@ -1,0 +1,18 @@
+<div>
+  <table border="1">
+    <tr>
+      <td>ID</td>
+      <td>姓名</td>
+      <td>年龄</td>
+      <td>生日</td>
+    </tr>
+    <% @data.each do |row| %>
+        <tr>
+          <td><%= row['ID'] %></td>
+          <td><%= row['NAME'] %></td>
+          <td><%= row['AGE'] %></td>
+          <td><%= row['BIRTHDAY'] %></td>
+        </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,17 @@
+.login {
+    text-align: -webkit-center;
+}
+
+#button {
+    text-align: -webkit-center;
+}
+
+.login table td{
+    text-align: -webkit-right;
+    font-size: 20px;
+}
+
+input {
+    font-size: 20px;
+}
+

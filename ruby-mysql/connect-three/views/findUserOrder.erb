@@ -1,0 +1,42 @@
+<div class="product">
+  <div class="product-head">
+    订单信息
+  </div>
+  <div>
+    <table>
+      <tr>
+        <th>用户名</th>
+        <th>订单ID</th>
+        <th>商品名称</th>
+        <th>商品价格</th>
+        <th>用户地址</th>
+        <th>操作</th>
+      </tr>
+      <% @findUserOrders.each { |findUserOrder| %>
+          <form action="/delete" method="get">
+            <tr>
+              <td>
+                <%= findUserOrder.userName%>
+              </td>
+              <td>
+                <%= findUserOrder.id%>
+              </td>
+              <td>
+                <%= findUserOrder.orderName%>
+              </td>
+              <td>
+                <%= findUserOrder.orderPrice%>
+              </td>
+              <td>
+                <%= findUserOrder.address%>
+              </td>
+              <td>
+                <input type="hidden" name="userId" value="<%= findUserOrder.id%>">
+                <input type="submit" value="删除" class="button product-button">
+              </td>
+            </tr>
+          </form>
+      <% } %>
+    </table>
+  </div>
+</div>

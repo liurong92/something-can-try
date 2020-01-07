@@ -1,0 +1,12 @@
+# A sample Gemfile
+source "https://rubygems.org"
+
+# gem "rails"
+gem "rspec"
+gem "rake"
+gem "mysql2"
+gem "sinatra"
+gem "thin"
+gem "byebug"
+gem "activerecord"
+

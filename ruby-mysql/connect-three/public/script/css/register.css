@@ -1,0 +1,15 @@
+.button.normal {
+    width: 100px;
+    height: 37px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.password-message {
+    font-size: 10px;
+    font-family: cursive;
+    color: brown;
+    margin-bottom: -10px;
+    margin-top: -5px;
+}

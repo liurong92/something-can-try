@@ -1,0 +1,81 @@
+<div>
+  <div>
+    <div class="useProfile">
+      <form action="/update" method="post">
+        <div class="head">
+          用户信息页面
+        </div>
+        <div class="format">
+          <div>
+            <label>用&nbsp;&nbsp;户&nbsp;&nbsp;ID：</label>
+            <label class="label-text"><%= @user[:id] %></label>
+            <input type="hidden" name="userId" value="<%= @user[:id]%>">
+          </div>
+          <div>
+            <label>用&nbsp;&nbsp;户&nbsp;&nbsp;名：</label>
+            <label class="label-text"><%= @user[:userName] %></label>
+          </div>
+          <div>
+            <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+            <input type="password" name="password" value="<%= @user[:password]%>" class="login-text" id="userProfile-password">
+          </div>
+          <div class="password-message userProfile-text">
+            长度不能少于6位
+          </div>
+          <div>
+            <label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
+            <input type="text" name="trueName" value="<%= @user[:trueName]%>" class="login-text">
+          </div>
+          <div>
+            <label>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：</label>
+            <input type="text" name="userAge" value="<%= @user[:userAge]%>" class="login-text">
+          </div>
+          <div>
+            <label>电子邮箱：</label>
+            <label class="label-text"><%= @user[:email]%></label>
+          </div>
+          <div>
+            <label>家庭住址：</label>
+            <input type="text" name="address" value="<%= @user[:address]%>" class="login-text">
+          </div>
+        </div>
+        <div class="submit">
+          <input type="submit" value="保存" class="button normal" id="update-userProfile">
+          <a href="/"><input type="button" value="退出" class="button normal" id="logout"></a>
+        </div>
+      </form>
+      <div class="show-product-button">
+        <button class="button">商品</button>
+      </div>
+    </div>
+
+    <div id="product">
+      <div class="product">
+        <div class="product-head">
+          商品显示
+        </div>
+        <div class="product-show">
+        <% @products.each{ |product|%>
+          <form action="/add" method="post">
+            <div>
+              <input type="hidden" name="userId" value="<%= @user[:id]%>">
+
+              <label class="product-font">商品名称：</label><%= product['productName']%>
+              <input type="hidden" name="productName" value="<%= product['productName']%>">
+
+              <label class="product-font">商品价格：</label><%= product['productPrice']%>
+              <input type="hidden" name="productPrice" value="<%= product['productPrice']%>">
+              <input type="submit" value="添加" class="button product-button">
+            </div>
+            <hr>
+          </form>
+        <% }%>
+        </div>
+        <form action="/userOrder" method="get">
+          <input type="hidden" name="userId" value="<%= @user[:id]%>">
+          <input type="submit" value="订单" class="button product-button order-return"></a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
